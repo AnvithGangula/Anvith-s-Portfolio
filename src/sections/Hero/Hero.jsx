@@ -25,7 +25,7 @@ function Hero() {
         <img
           src={heroImg}
           className={styles.hero}
-          alt="Profile picture of Anvith Gangula"
+          alt="Profile picture of Harris Johnsen"
         />
         <img
           className={styles.colorMode}
@@ -40,20 +40,17 @@ function Hero() {
           <br />
           Gangula
         </h1>
-        <h2>Game Developer</h2>
+        <h2>Frontend Developer & Full Stack Developer</h2>
         <span>
-          <a href="https://twitter.com/" target="_blank">
-            <img src={twitterIcon} alt="Twitter icon" />
-          </a>
           <a href="https://github.com/AnvithGangula" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="https://www.linkedin.com/in/anvith-gangula-035278309/" target="_blank">
+          <a href="https://www.linkedin.com/in/anvith-gangula-614834254/" target="_blank">
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
         <p className={styles.description}>
-          With a passion for Gaming and Game Development since 2017
+          With a passion for Computer and Aim to Make Human life Simpler
         </p>
         <a href={CV} download>
           <button className="hover">Resume</button>
