@@ -21,7 +21,7 @@ npm run dev
 # Personal Portfolio ⚡️ 
 > A clean, beautiful, responsive portfolio template for Software Developers!
 
-> https://varadbhogayata.github.io
+> https://anvith-s-portfolio.netlify.app/
 
 
 [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/varadbhogayata/varadbhogayata.github.io/commits/master)
