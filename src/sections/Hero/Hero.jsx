@@ -40,7 +40,7 @@ function Hero() {
           <br />
           Gangula
         </h1>
-        <h2>ML Engineer</h2>
+        <h2>Word Press Developer</h2>
         <span>
           <a href="https://github.com/AnvithGangula" target="_blank">
             <img src={githubIcon} alt="Github icon" />
