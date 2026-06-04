@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 40px 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap-reverse;
+}
+
+.colorModeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.imgWrapper {
+  position: relative;
+}
+
+.hero {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  position: relative;
+  z-index: 1;
+}
+
+.imgGlow {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
+  z-index: 0;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+.colorMode {
+  width: 30px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.colorMode:hover { transform: rotate(20deg) scale(1.15); }
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  color: var(--accent-color);
+  background: var(--badge-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
+  padding: 4px 14px;
+  width: fit-content;
+  letter-spacing: 0.05em;
+}
+.badge::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: blink 1.4s ease-in-out infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+.socials a img {
+  width: 28px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.socials a img:hover { transform: translateY(-3px); opacity: 0.75; }
+
+.description {
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+.ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px 0;
+  }
+  .badge, .socials, .ctas { justify-content: center; }
+  .hero { width: 200px; height: 200px; }
+}

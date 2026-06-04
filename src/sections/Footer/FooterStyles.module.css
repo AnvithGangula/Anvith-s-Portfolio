@@ -1,0 +1,45 @@
+.container {
+  border-top: 1px solid var(--card-border);
+  padding: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.name {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.copy {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  color: var(--footer-text-color);
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+.links a {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  color: var(--footer-text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.links a:hover { color: var(--accent-color); }
+
+@media (max-width: 600px) {
+  .container { padding: 30px 20px; }
+  .inner { flex-direction: column; text-align: center; align-items: center; }
+}

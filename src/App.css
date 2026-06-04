@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap');
+
+:root {
+  --background-color: #f8f7f4;
+  --accent-color: #0987f2;
+  --accent-soft: rgba(9, 135, 242, 0.08);
+  --btn-text-color: #fff;
+  --text-color: #1a1a1a;
+  --muted-color: #666;
+  --card-bg: #ffffff;
+  --card-border: #e5e5e5;
+  --tag-bg: #f0f4ff;
+  --badge-bg: rgba(9, 135, 242, 0.06);
+  --shadow-color: rgba(0,0,0,0.09);
+  --footer-text-color: #999;
+}
+
+[data-theme='dark'] {
+  --background-color: #111214;
+  --accent-color: #3b9eff;
+  --accent-soft: rgba(59, 158, 255, 0.1);
+  --btn-text-color: #0d1117;
+  --text-color: #e8e8e8;
+  --muted-color: #999;
+  --card-bg: #1a1c20;
+  --card-border: #2a2d34;
+  --tag-bg: #1e2535;
+  --badge-bg: rgba(59, 158, 255, 0.08);
+  --shadow-color: rgba(0,0,0,0.35);
+  --footer-text-color: #666;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 80px;
+  transition: background-color 0.3s;
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+h1, h2, h3, p {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3, p {
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+h2, h3 { font-size: 20px; }
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+p { font-size: 15px; font-weight: 300; }
+
+.sectionTitle {
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.hover { cursor: pointer; }
+
+/* Global buttons */
+.btn-primary {
+  background: var(--accent-color);
+  color: var(--btn-text-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  letter-spacing: 0.02em;
+}
+.btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-color);
+  border: 1.5px solid var(--card-border);
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.btn-secondary:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+@media (width >= 800px) {
+  #root { gap: 120px; }
+  h1 { font-size: 44px; }
+  h2, h3 { font-size: 22px; }
+  p { font-size: 16px; }
+}
+
+@media (width >= 1400px) {
+  #root { gap: 160px; }
+  h1 { font-size: 52px; }
+}

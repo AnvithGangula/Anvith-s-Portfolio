@@ -1,0 +1,59 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.group {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 28px;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.group:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.groupLabel {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 16px;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: var(--tag-bg);
+  color: var(--text-color);
+  border: 1px solid var(--card-border);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.pill:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--btn-text-color);
+}
+
+@media (max-width: 700px) {
+  .container { padding: 0 20px; }
+  .groups { grid-template-columns: 1fr; }
+}
